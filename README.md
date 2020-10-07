@@ -1,5 +1,5 @@
 # Module: Time trap / time lock to defend against bots that create a customer account
-(DE): Modul: Time trap / time lock to defend against bots that create a customer account
+(DE): Modul: Zeitfalle / Zeitsperre zur Abwehr von Bots, die ein Kundenkonto erstellen
 
 Source modified Forum: [Modul für Shopversion 2.x](https://www.modified-shop.org/forum/index.php?topic=41381.msg377529#msg377529)
 
