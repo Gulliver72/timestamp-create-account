@@ -7,7 +7,7 @@ Source modified Forum: [Modul für Shopversion 2.x](https://www.modified-shop.or
 PHP 7.0 or above
 
 ## Authors
-- 2020 by Gulliver72 - transferred to Github, reworked as a system module and entered to the MMLC 
+- 2020 by Gulliver72 - transferred to Github, reworked as a system module and entered in MMLC 
 - 2019 by p3e Zeitstempel Create Account 2019-10-23
 
 ## Contributing
