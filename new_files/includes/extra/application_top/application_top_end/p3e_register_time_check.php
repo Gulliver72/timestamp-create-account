@@ -6,29 +6,32 @@
 	 * (default=2) - falls Bots durchkommen schrittweise erhöhen
 	 */
 
-	defined('CHK_TIME_MIN') || define('CHK_TIME_MIN', 2);
-
-	if (basename($_SERVER["SCRIPT_NAME"], '.php') == 'create_account' || 
-		basename($_SERVER["SCRIPT_NAME"], '.php') == 'create_guest_account')
+	if (defined('MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT') && MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT == 'true')
 	{
-        if (!isset($_POST['action']) || 
-			(isset($_POST['action']) && $_POST['action'] != 'process'))
+		defined('MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT_CHK_TIME_MIN') || define('MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT_CHK_TIME_MIN', 2);
+
+		if (basename($_SERVER["SCRIPT_NAME"], '.php') == 'create_account' || 
+			basename($_SERVER["SCRIPT_NAME"], '.php') == 'create_guest_account')
 		{
-			$_SESSION['timechk'] = time();   // Zeitstempel
-        }
-        
-		if (isset($_POST['action']) && $_POST['action'] == 'process')
-		{
-            if (isset($_SESSION['timechk']))
+        	if (!isset($_POST['action']) || 
+				(isset($_POST['action']) && $_POST['action'] != 'process'))
 			{
-                if (time() - $_SESSION['timechk'] < CHK_TIME_MIN)
+				$_SESSION['timechk'] = time();   // Zeitstempel
+        	}
+        
+			if (isset($_POST['action']) && $_POST['action'] == 'process')
+			{
+            	if (isset($_SESSION['timechk']))
 				{
-                    // stinkt nach Bot - ab auf die Startseite
-                    unset ($_SESSION['timechk']);
-                    xtc_redirect(xtc_href_link(FILENAME_DEFAULT));
-                }
-            } else {
-                xtc_redirect(xtc_href_link(FILENAME_DEFAULT));
-			}
-        }
+                	if (time() - $_SESSION['timechk'] < MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT_CHK_TIME_MIN)
+					{
+                    	// stinkt nach Bot - ab auf die Startseite
+                    	unset ($_SESSION['timechk']);
+                    	xtc_redirect(xtc_href_link(FILENAME_DEFAULT));
+                	}
+            	} else {
+                	xtc_redirect(xtc_href_link(FILENAME_DEFAULT));
+				}
+        	}
+		}
 	}
