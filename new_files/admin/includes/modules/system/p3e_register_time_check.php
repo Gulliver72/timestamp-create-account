@@ -10,16 +10,22 @@ class McmTimestampCreateAccount extends StdModule
     public function __construct()
     {
         $this->init('MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT');
+        
+        $this->addKey('CHK_TIME_MIN');
     }
        
-    public function display()
+
+    public function display(): array
     {
-        return $this->displaySaveButton();
+
+        return $this->displaySaveButton());
     }
 
     public function install()
     {
         parent::install();
+        
+        if (!defined($this->modulePrefix . '_CHK_TIME_MIN')) $this->addConfiguration('CHK_TIME_MIN', '2', 6, 2);
 
     }
 
