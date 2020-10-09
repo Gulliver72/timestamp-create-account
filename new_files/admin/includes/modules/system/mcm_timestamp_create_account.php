@@ -32,5 +32,7 @@ class McmTimestampCreateAccount extends StdModule
     public function remove()
     {
         parent::remove();
+        
+        $this->deleteConfiguration('CHK_TIME_MIN');
     }
 }
