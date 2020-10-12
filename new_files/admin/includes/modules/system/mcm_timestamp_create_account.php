@@ -18,7 +18,7 @@ class McmTimestampCreateAccount extends StdModule
     public function display(): array
     {
 
-        return $this->displaySaveButton());
+        return $this->displaySaveButton();
     }
 
     public function install()
