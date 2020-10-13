@@ -7,7 +7,7 @@ Source modified Forum: [Modul für Shopversion 2.x](https://www.modified-shop.or
 PHP 7.0 or above
 
 ## Install
-We recommend installing the module via the [MMLC](https://module-loader.de). *(Experienced developers can also install the module manually without MMLC. The required dependencies and autoloads must be installed manually.)*
+We recommend installing the module via the [MMLC](https://module-loader.de). *(Experienced developers can also install the module manually without MMLC. For this the required dependencies and autoloads must be also installed manually.)*
 
 ## Authors
 - 2020 by Gulliver72 - transferred to Github, reworked as a system module and entered in MMLC 
