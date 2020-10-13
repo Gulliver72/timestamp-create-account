@@ -1,6 +1,6 @@
 {
     "name": "Zeitfalle / Zeitsperre zur Abwehr von Bots, die ein Kundenkonto erstellen",
-    "archiveName": "ModifiedCommunityModules/timestamp-create-account",
+    "archiveName": "modifiedcommunitymodules/timestamp-create-account",
     "sourceDir": "new_files",
     "version": "auto",
 
