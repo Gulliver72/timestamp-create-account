@@ -6,7 +6,7 @@ Source modified Forum: [Modul für Shopversion 2.x](https://www.modified-shop.or
 ## Requirements
 PHP 7.0 or above
 
-## Install
+## Installation
 We recommend installing the module via the [MMLC](https://module-loader.de). *(Experienced developers can also install the module manually without MMLC. For this the required dependencies and autoloads must be also installed manually.)*
 
 ## Authors
