@@ -1,5 +1,4 @@
 <?php
-
 defined('_VALID_XTC') or die('Direct Access to this location is not allowed.');
 
 use RobinTheHood\ModifiedStdModule\Classes\StdModule;
@@ -20,18 +19,14 @@ class mcm_timestamp_create_account extends StdModule
 
     public function display(): array
     {
-
-		return array('text' => '<br />' . '<div align="center">' . xtc_button(BUTTON_SAVE) .
-			             xtc_button_link(BUTTON_CANCEL, xtc_href_link(FILENAME_MODULE_EXPORT, 'set=' . $_GET['set'] . '&module=' . strtolower(str_replace('MODULE_', '', $this->modulePrefix)))) . '</div>'
-			         );
+        return $this->displaySaveButton();
     }
 
     public function install()
     {
         parent::install();
-        
-        if (!defined($this->modulePrefix . '_CHK_TIME_MIN')) $this->addConfiguration('CHK_TIME_MIN', '2', 6, 2);
 
+        $this->addConfiguration('CHK_TIME_MIN', '2', 6, 2);
     }
 
     public function remove()
