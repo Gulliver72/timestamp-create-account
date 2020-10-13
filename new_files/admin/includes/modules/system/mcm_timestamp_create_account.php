@@ -10,7 +10,7 @@ class mcm_timestamp_create_account extends StdModule
     {
         $this->init('MODULE_MCM_TIMESTAMP_CREATE_ACCOUNT');
         
-        $this->addKey('CHK_TIME_MIN');
+        $this->addKey('CHECK_TIME_MIN');
     }
 
     public function process($file)
@@ -26,13 +26,13 @@ class mcm_timestamp_create_account extends StdModule
     {
         parent::install();
 
-        $this->addConfiguration('CHK_TIME_MIN', '2', 6, 2);
+        $this->addConfiguration('CHECK_TIME_MIN', '2', 6, 2);
     }
 
     public function remove()
     {
         parent::remove();
         
-        $this->deleteConfiguration('CHK_TIME_MIN');
+        $this->deleteConfiguration('CHECK_TIME_MIN');
     }
 }
